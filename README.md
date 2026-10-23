@@ -1,2 +1,2 @@
-# sravanthi.github.io-portfolio.mkm
+# sravanthi.github.io/portfolio.mkm
 my portfolio of app development.
