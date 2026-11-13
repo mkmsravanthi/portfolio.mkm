@@ -226,3 +226,51 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
+/* Deshi Boutique Gallery */
+
+.deshi-gallery {
+    background: #eeedff;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.platform {
+    text-align: center;
+}
+
+.platform h4 {
+    color: #6558d3;
+    margin: 5px 0 15px;
+}
+
+.platform-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.platform-images img {
+    width: 48%;
+    height: 200px;
+    object-fit: contain;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+/* Mobile screens */
+
+@media (max-width: 650px) {
+    .deshi-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-images img {
+        height: 240px;
+    }
+}
+
+
