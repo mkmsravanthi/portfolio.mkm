@@ -1,5 +1,9 @@
 
-/* General styles */
+
+/* =========================================
+   GENERAL STYLES
+========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -20,6 +24,11 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+
+/* =========================================
+   HEADER & NAVIGATION
+========================================= */
 
 header {
     display: flex;
@@ -45,6 +54,11 @@ nav a:hover,
 .project-link:hover {
     color: #6558d3;
 }
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
 
 .hero {
     min-height: 490px;
@@ -94,6 +108,11 @@ nav a:hover,
     background: #5043b5;
 }
 
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
 .section {
     padding: 75px 8%;
 }
@@ -108,6 +127,11 @@ nav a:hover,
     max-width: 750px;
 }
 
+
+/* =========================================
+   SKILLS & PROJECT GRIDS
+========================================= */
+
 .skills-grid,
 .projects-grid {
     display: grid;
@@ -116,20 +140,19 @@ nav a:hover,
     margin-top: 30px;
 }
 
-.skill-card,
-.project-card {
+
+/* =========================================
+   SKILL CARDS
+========================================= */
+
+.skill-card {
     background: white;
     border: 1px solid #e9e9f1;
     border-radius: 14px;
-    overflow: hidden;
-}
-
-.skill-card {
     padding: 24px;
 }
 
-.skill-card h3,
-.project-card h3 {
+.skill-card h3 {
     margin-top: 0;
 }
 
@@ -138,14 +161,22 @@ nav a:hover,
     color: #62647a;
 }
 
-.project-placeholder {
-    min-height: 170px;
-    display: grid;
-    place-items: center;
-    background: linear-gradient(135deg, #e8e5ff, #f5eaff);
-    color: #6558d3;
-    font-size: 3rem;
-    font-weight: bold;
+
+/* =========================================
+   PROJECT CARDS
+========================================= */
+
+.project-card {
+    background: white;
+    border: 1px solid #e9e9f1;
+    border-radius: 14px;
+    overflow: hidden;
+    min-width: 0;
+    width: 100%;
+}
+
+.project-card h3 {
+    margin-top: 0;
 }
 
 .project-content {
@@ -166,44 +197,26 @@ nav a:hover,
     font-weight: bold;
 }
 
-.contact {
-    background: #eeedff;
+
+/* =========================================
+   OLD PROJECT PLACEHOLDER
+========================================= */
+
+.project-placeholder {
+    min-height: 170px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #e8e5ff, #f5eaff);
+    color: #6558d3;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
-footer {
-    padding: 24px;
-    text-align: center;
-    color: #62647a;
-}
 
-/* Mobile layout */
-@media (max-width: 650px) {
-    header {
-        align-items: flex-start;
-        gap: 16px;
-        flex-direction: column;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 12px 18px;
-    }
-
-    .hero {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .section {
-        padding: 55px 6%;
-    }
-
-    .skills-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* =========================================
+   OLD PROJECT IMAGE LAYOUT
+   (For any project still using project-image)
+========================================= */
 
 .project-image {
     min-height: 320px;
@@ -227,68 +240,119 @@ footer {
 }
 
 
+/* =========================================
+   APP SCREENSHOT GALLERIES
+   Expenses & Savings
+   Triple Treat
+   Neighbourly
+========================================= */
 
-
-/* DESHI BOUTIQUE PROJECT GALLERIES */
-
+.app-gallery,
 .deshi-gallery {
     width: 100%;
-    padding: 20px;
+    padding: 25px;
     background: #eeedff;
     overflow: hidden;
 }
 
+/* Gallery platform heading */
+
+.app-gallery .platform,
 .deshi-gallery .platform {
-    text-align: center;
+    width: 100%;
     min-width: 0;
+    text-align: center;
 }
 
+.app-gallery .platform h4,
 .deshi-gallery .platform h4 {
     color: #6558d3;
-    margin: 5px 0 18px;
+    margin: 5px 0 20px;
+    font-size: 1.2rem;
 }
 
+/* Screenshot grid */
+
+.app-gallery .platform-images,
 .deshi-gallery .platform-images {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 15px;
     justify-items: center;
+    align-items: center;
+    width: 100%;
 }
 
+/* Screenshot images */
+
+.app-gallery .gallery-image,
 .deshi-gallery .gallery-image {
     display: block;
     width: 100%;
-    max-width: 145px;
-    height: 230px;
+    max-width: 180px;
+    height: 280px;
     object-fit: contain;
-    background: white;
-    border-radius: 12px;
     padding: 5px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
+/* Hover effect */
+
+.app-gallery .gallery-image:hover,
 .deshi-gallery .gallery-image:hover {
     transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* SCREENSHOT PREVIEW */
+
+/* =========================================
+   DESHI BOUTIQUE GALLERIES
+========================================= */
+
+/* iOS and Android separate cards */
+
+.deshi-gallery {
+    padding: 25px;
+}
+
+.deshi-gallery .platform-images {
+    gap: 15px;
+}
+
+.deshi-gallery .gallery-image {
+    max-width: 145px;
+    height: 230px;
+}
+
+
+/* =========================================
+   SCREENSHOT PREVIEW MODAL
+========================================= */
 
 .image-modal {
     display: none;
     position: fixed;
     z-index: 9999;
     inset: 0;
-    background: rgba(0,0,0,0.92);
+
+    background: rgba(0, 0, 0, 0.92);
+
     justify-content: center;
     align-items: center;
+
     padding: 50px 70px;
 }
 
 .image-modal.active {
     display: flex;
 }
+
+/* Large screenshot inside modal */
 
 .image-modal img {
     display: block;
@@ -301,18 +365,37 @@ footer {
     background: white;
 }
 
+
+/* =========================================
+   MODAL BUTTONS
+========================================= */
+
 .modal-close,
 .modal-prev,
 .modal-next {
     position: absolute;
     border: none;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     color: white;
     cursor: pointer;
+
     border-radius: 50%;
     width: 45px;
     height: 45px;
+
     font-size: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background 0.2s ease;
+}
+
+.modal-close:hover,
+.modal-prev:hover,
+.modal-next:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .modal-close {
@@ -328,6 +411,9 @@ footer {
     right: 15px;
 }
 
+
+/* Screenshot counter */
+
 .modal-counter {
     position: absolute;
     bottom: 18px;
@@ -335,12 +421,128 @@ footer {
     font-size: 14px;
 }
 
-/* MOBILE */
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact {
+    background: #eeedff;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 24px;
+    text-align: center;
+    color: #62647a;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .app-gallery,
+    .deshi-gallery {
+        padding: 18px;
+    }
+
+    .app-gallery .gallery-image {
+        max-width: 150px;
+        height: 240px;
+    }
+
+    .deshi-gallery .gallery-image {
+        max-width: 125px;
+        height: 215px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
 
 @media (max-width: 650px) {
+
+    /* Header */
+
+    header {
+        align-items: flex-start;
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+
+    /* Sections */
+
+    .section {
+        padding: 55px 6%;
+    }
+
+
+    /* One card per row */
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Galleries */
+
+    .app-gallery,
+    .deshi-gallery {
+        padding: 15px;
+    }
+
+    .app-gallery .platform h4,
+    .deshi-gallery .platform h4 {
+        font-size: 1.05rem;
+    }
+
+    .app-gallery .platform-images,
+    .deshi-gallery .platform-images {
+        gap: 10px;
+    }
+
+    .app-gallery .gallery-image {
+        max-width: 145px;
+        height: 220px;
+    }
+
     .deshi-gallery .gallery-image {
+        max-width: 125px;
         height: 210px;
     }
+
+
+    /* Modal */
 
     .image-modal {
         padding: 50px 45px;
@@ -351,6 +553,11 @@ footer {
         max-height: 70vh;
     }
 
+    .modal-close {
+        top: 12px;
+        right: 12px;
+    }
+
     .modal-prev {
         left: 5px;
     }
@@ -358,4 +565,33 @@ footer {
     .modal-next {
         right: 5px;
     }
+
+    .modal-counter {
+        bottom: 12px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .app-gallery .gallery-image,
+    .deshi-gallery .gallery-image {
+        max-width: 115px;
+        height: 190px;
+    }
+
+    .app-gallery .platform-images,
+    .deshi-gallery .platform-images {
+        gap: 8px;
+    }
+
+    .project-content {
+        padding: 18px;
+    }
+
 }
