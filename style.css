@@ -593,5 +593,37 @@ footer {
     .project-content {
         padding: 18px;
     }
+   /* MedBeat internship galleries */
+
+.medbeat-gallery {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.medbeat-gallery .platform {
+    width: 100%;
+}
+
+.medbeat-gallery .platform-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.medbeat-gallery .platform-images img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Mobile screens */
+
+@media (max-width: 650px) {
+    .medbeat-gallery .platform-images {
+        grid-template-columns: 1fr;
+    }
+}
 
 }
