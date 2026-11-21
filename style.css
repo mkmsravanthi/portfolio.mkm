@@ -627,3 +627,91 @@ footer {
 }
 
 }
+/* MedBeat internship section layout */
+
+.medbeat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Separate each internship phase */
+
+.medbeat-phase {
+    margin-top: 20px;
+    padding: 25px;
+    background: #f8f8fc;
+    border-radius: 14px;
+    border: 1px solid #e5e3f5;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Phase headings */
+
+.medbeat-phase h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+/* Phase paragraphs */
+
+.medbeat-phase p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* Phase lists */
+
+.medbeat-phase ul {
+    padding-left: 25px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.medbeat-phase li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+/* Keep MedBeat content inside its card */
+
+.medbeat-card > * {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* MedBeat galleries */
+
+.medbeat-gallery {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 650px) {
+
+    .medbeat-card {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .medbeat-phase {
+        padding: 18px;
+    }
+
+    .medbeat-phase h3 {
+        font-size: 1.25rem;
+    }
+
+}
