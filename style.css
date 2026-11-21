@@ -571,8 +571,6 @@ footer {
     }
 
 }
-
-
 /* =========================================
    SMALL MOBILE PHONES
 ========================================= */
@@ -593,82 +591,55 @@ footer {
     .project-content {
         padding: 18px;
     }
-   /* MedBeat internship galleries */
-
-.medbeat-gallery {
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.medbeat-gallery .platform {
-    width: 100%;
-}
-
-.medbeat-gallery .platform-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.medbeat-gallery .platform-images img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-/* Mobile screens */
-
-@media (max-width: 650px) {
-    .medbeat-gallery .platform-images {
-        grid-template-columns: 1fr;
-    }
-}
 
 }
-/* MedBeat internship section layout */
+
+
+/* =========================================
+   MEDBEAT INTERNSHIP SECTION
+========================================= */
 
 .medbeat-card {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 25px;
+    gap: 25px;
+    padding: 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
 }
 
-/* Separate each internship phase */
+/* Intro content */
 
-.medbeat-phase {
-    margin-top: 20px;
+.medbeat-card > .project-content {
     padding: 25px;
-    background: #f8f8fc;
-    border-radius: 14px;
-    border: 1px solid #e5e3f5;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-/* Phase headings */
+/* Internship phases */
+
+.medbeat-phase {
+    margin: 0 25px;
+    padding: 25px;
+    background: #f8f8fc;
+    border: 1px solid #e5e3f5;
+    border-radius: 14px;
+    width: auto;
+    box-sizing: border-box;
+}
 
 .medbeat-phase h3 {
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     line-height: 1.4;
 }
 
-/* Phase paragraphs */
-
 .medbeat-phase p {
+    margin-top: 0;
     margin-bottom: 18px;
     line-height: 1.8;
     max-width: 100%;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
 }
-
-/* Phase lists */
 
 .medbeat-phase ul {
     padding-left: 25px;
@@ -679,22 +650,36 @@ footer {
 .medbeat-phase li {
     margin-bottom: 12px;
     line-height: 1.7;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
-/* Keep MedBeat content inside its card */
+/* MedBeat screenshots */
 
-.medbeat-card > * {
-    width: 100%;
-    max-width: 100%;
+.medbeat-gallery {
+    margin: 20px 25px;
+    width: auto;
     box-sizing: border-box;
 }
 
-/* MedBeat galleries */
+.medbeat-gallery .platform {
+    width: 100%;
+}
 
-.medbeat-gallery {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.medbeat-gallery .platform-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.medbeat-gallery .platform-images img {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
 /* Mobile layout */
@@ -702,16 +687,36 @@ footer {
 @media (max-width: 650px) {
 
     .medbeat-card {
-        padding: 15px;
-        gap: 20px;
+        gap: 15px;
+    }
+
+    .medbeat-card > .project-content {
+        padding: 18px;
     }
 
     .medbeat-phase {
+        margin: 0 15px;
         padding: 18px;
+    }
+
+    .medbeat-gallery {
+        margin: 15px;
     }
 
     .medbeat-phase h3 {
         font-size: 1.25rem;
     }
 
+    .medbeat-gallery .platform-images {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .medbeat-gallery .platform-images img {
+        max-width: 145px;
+        height: 220px;
+    }
+
 }
+
+
